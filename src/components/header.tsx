@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom"
 
-export default function Header () {
+interface i {
+    scrollNum : boolean
+}
+
+export default function Header ({scrollNum}: i) {
+
+
 
     const navigate = useNavigate();
 
@@ -8,7 +14,7 @@ export default function Header () {
     return(
     <>
     <nav>
-        <div className='nav'>
+        <div className='nav' style={{maxHeight: scrollNum ? '90px' : '0px'}}>
         <span className='logo' onClick={ () => {navigate("/")}}>Gallery</span>
         <div className='category'>
             <span className='category-artists' onClick={ () => {navigate("/artists")}}>artists</span>

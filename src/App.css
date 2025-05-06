@@ -1,18 +1,22 @@
 .nav{
   width: 100vw;
   height: 90px;
-  background-color: rgb(145, 160, 226);
+  background-color: white;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
 }
 
 .logo{
   font-size: 2rem;
   font-weight: 800;
 }
-
 
 
 .category{
@@ -22,5 +26,146 @@
 }
 
 .a{
-  height: 1500px;
+  height: 5000px;
+}
+
+.main{
+  width: 100vw;
+  height:  100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  
+}
+
+.main-text{
+  width: 50vw;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 100px 100px;
+  position: relative;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.main-btn{
+  width: 50vw;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 0 100px 100px;
+  position: relative;
+  bottom: 20px;
+  right: 100px;
+  z-index: 1;
+}
+
+
+/* cookie.tsx */
+.cookiebox{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+  z-index: 20;
+}
+
+.cookiebox-policybox{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.cookiebox-acceptbox{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  gap: 35px;
+}
+
+.cookiebox-acceptbox-accept{
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #c9c9c9;
+  cursor: pointer;
+}
+
+
+/*cookieCheck.tsx*/
+.preferences{
+  width: 450px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 30;
+  top: 23%;
+  left: 37%;
+  background-color: white;
+  padding: 50px;
+}
+
+.cookie-exit{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -20px;
+  left: 440px;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.cookie-h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  top: -40px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.labelbox{
+  font-size: 0.8rem;
+  margin-top: 6px;
+  color: #414141;
+}
+
+.labelbox p{
+  margin-top: 3px;
+  color: #666666;
+}
+
+.save-btn{
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 15px;
+  cursor: pointer;
 }
