@@ -8,7 +8,7 @@ interface i {
 
 
 
-export default function CookieCheck ({cm, setCm} : i) {
+export default function CookieCheck ({setCm} : i) {
     return(
         <>
         <div className="preferences">
