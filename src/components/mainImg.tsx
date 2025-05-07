@@ -12,11 +12,21 @@ export default function MainImg() {
     function imgBtn(i:string) {
         switch(i){
             case 'left' :
-            setImgNum(imgNum-1);
-            break
+                if(imgNum > 1) {
+                    setImgNum(imgNum-1);
+                } else if(imgNum == 1) {
+                    setImgNum(3)
+                }
+                break
+                
             case 'right' :
-            setImgNum(imgNum+1);
-            break
+                if(imgNum < 3) {
+                    setImgNum(imgNum+1);
+                } else if(imgNum == 3) {
+                    setImgNum(1)
+                }
+                break
+            
         }
     }
     
@@ -30,8 +40,8 @@ export default function MainImg() {
                 <span>2025.5.5 - 2025.7.24 GALLERY_SEOUL</span>
             </div>
             <div className="main-btn">
-                <span onClick={() => {imgBtn('left')}}>왼쪽</span>
-                <span onClick={() => {imgBtn('right')}}>오른쪽</span>
+                <span onClick={() => {imgBtn('left')}}>⇦</span>
+                <span onClick={() => {imgBtn('right')}}>⇨</span>
             </div>
         </div>
         </>

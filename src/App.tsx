@@ -10,10 +10,11 @@ import NewsPage from './pages/news';
 import Header from './components/header';
 import MainImg from './components/mainImg';
 import Cookie from './components/cookie';
-
+import CookieCheck from './components/cookieCheck' ;
 
 
 function App() {
+
 // header disable
   const [scrollNum, setScrollNum] = useState(true)
   const [scrollY, setScrollY] = useState(0);
@@ -32,9 +33,14 @@ function App() {
   }, [scrollY])
 
 
-
 // cookieTap close
   const [accept, setAccept] = useState(true);
+
+
+
+// cookieCheck component create
+  const [checkMove, setCheckMove] = useState(false)
+
 
 
   return (
@@ -42,7 +48,11 @@ function App() {
   <Header scrollNum={scrollNum}/>
   <MainImg/>
   
-  {accept && <Cookie ac={accept} setAc={setAccept}/>}
+
+  <Cookie ac={accept} setAc={setAccept} cm={checkMove} setCm={setCheckMove}/>
+
+
+  {checkMove && <CookieCheck ac={accept} setAc={setAccept} cm = {checkMove} setCm = {setCheckMove}/>}
 
     <div className='a'>
     </div>

@@ -3,16 +3,18 @@
 interface i {
     cm : boolean
     setCm : React.Dispatch<React.SetStateAction<boolean>>
+    ac : boolean
+    setAc :React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 
 
-export default function CookieCheck ({setCm} : i) {
+export default function CookieCheck ({setCm, setAc} : i) {
     return(
         <>
         <div className="preferences">
-            <button className="cookie-exit" onClick={() => {setCm(false)}}>X</button>
+            <button className="cookie-exit" onClick={() => {setCm(false); setAc((bool) => (!bool))}}>X</button>
             <h3 className="cookie-h3">Cookie preferences</h3>
             <span style={{fontSize: '0.8rem', position: 'relative', top: '-20px', color: '#444444'}}>Check the boxes for the cookie categories you allow our site to use</span>
             <div className="labelbox">

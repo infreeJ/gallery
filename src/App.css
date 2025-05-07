@@ -12,12 +12,13 @@
   overflow: hidden;
   position: absolute;
   z-index: 10;
-  box-shadow: 4px 4px 10px 0px black;
+  box-shadow: 1px 1px 10px 0px rgb(83, 83, 83);
 }
 
 .logo{
   font-size: 2rem;
   font-weight: 800;
+  color: #838383;
 }
 
 
@@ -25,6 +26,7 @@
   width: 50%;
   display: flex;
   justify-content: space-around;
+  color: #3f3f3f;
 }
 
 .a{
@@ -51,13 +53,13 @@
   position: relative;
   bottom: 20px;
   z-index: 1;
+  color: white;
 }
 
 .main-btn{
   width: 50vw;
   height: calc(100vh - 90px);
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0 0 100px 100px;
@@ -65,19 +67,32 @@
   bottom: 20px;
   right: 100px;
   z-index: 1;
+  color: rgb(224, 224, 224);
+  font-size: 1.4rem;
+  gap: 15px;
+  /* cursor: pointer; */
 }
 
 
 /* cookie.tsx */
 .cookiebox{
   width: 100%;
-  height: 100px;
+  max-height: 100px;
+  min-height: 100px;
   display: flex;
   position: fixed;
   bottom: 0px;
   background-color: white;
   z-index: 20;
   box-shadow: 4px 4px 10px 0px black;
+  overflow: hidden;
+  transition: max-height 0.5s ease, min-height 0.5s ease
+}
+
+.cookiebox.closed {
+  max-height: 0;
+  min-height: 0;
+  pointer-events: none;
 }
 
 .cookiebox-policybox{
