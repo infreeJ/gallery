@@ -11,6 +11,7 @@ import Header from './components/header';
 import MainImg from './components/mainImg';
 import Cookie from './components/cookie';
 import CookieCheck from './components/cookieCheck' ;
+import Overlay from './components/overlay'
 
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
   const [scrollNum, setScrollNum] = useState(true)
   const [scrollY, setScrollY] = useState(0);
 
+  
   window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    setScrollY(y);
+    // const y = window.scrollY;
+    setScrollY(window.scrollY);
   })
+
 
   useEffect( () => {
     if(scrollY == 0){
@@ -33,29 +36,37 @@ function App() {
   }, [scrollY])
 
 
-// cookieTap close
-  const [accept, setAccept] = useState(true);
 
+
+
+// cookieTap close
+  const [cookietap, setCookietap] = useState(true);
 
 
 // cookieCheck component create
-  const [checkMove, setCheckMove] = useState(false)
+  const [manageCookies, setManageCookies] = useState(false)
 
+
+// cookieCheck scroll off
+  if(manageCookies) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
 
 
   return (
   <>
+  {manageCookies && <Overlay cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
+
   <Header scrollNum={scrollNum}/>
   <MainImg/>
+
+  <Cookie cookietap={cookietap} setCookietap={setCookietap} manageCookies={manageCookies} setManageCookies={setManageCookies}/>
+
+  {manageCookies && <CookieCheck cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
   
-
-  <Cookie ac={accept} setAc={setAccept} cm={checkMove} setCm={setCheckMove}/>
-
-
-  {checkMove && <CookieCheck ac={accept} setAc={setAccept} cm = {checkMove} setCm = {setCheckMove}/>}
-
-    <div className='a'>
-    </div>
+    <div className='a'/>
   </>
   )
 }

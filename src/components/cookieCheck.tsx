@@ -1,20 +1,21 @@
 
 
 interface i {
-    cm : boolean
-    setCm : React.Dispatch<React.SetStateAction<boolean>>
-    ac : boolean
-    setAc :React.Dispatch<React.SetStateAction<boolean>>
+    cookietap : boolean
+    setCookietap :React.Dispatch<React.SetStateAction<boolean>>
+    manageCookies : boolean
+    setManageCookies : React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 
 
-export default function CookieCheck ({setCm, setAc} : i) {
+export default function CookieCheck ({setCookietap, setManageCookies} : i) {
     return(
         <>
+        
         <div className="preferences">
-            <button className="cookie-exit" onClick={() => {setCm(false); setAc((bool) => (!bool))}}>X</button>
+            <button className="cookie-exit" onClick={() => {setManageCookies(false); setCookietap((bool) => (!bool))}}>X</button>
             <h3 className="cookie-h3">Cookie preferences</h3>
             <span style={{fontSize: '0.8rem', position: 'relative', top: '-20px', color: '#444444'}}>Check the boxes for the cookie categories you allow our site to use</span>
             <div className="labelbox">
@@ -33,8 +34,9 @@ export default function CookieCheck ({setCm, setAc} : i) {
                 <label><input type="checkbox"/>Marketing</label>
                 <p style={{fontSize: '0.7rem'}}>Allow us to identify our visitors so that we can offer personalised, targeted marketing.</p>
             </div>
-            <span className="save-btn" onClick={() => {setCm(false)}}>Save preferences</span>
+            <span className="save-btn" onClick={() => {setManageCookies(false)}}>Save preferences</span>
         </div>
+        
         
         </>
     )
