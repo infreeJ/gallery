@@ -29,46 +29,55 @@
   color: #3f3f3f;
 }
 
-.a{
-  height: 5000px;
-  background-color: #838383;
-}
+
 
 
 /* mainImg */
 .main{
   width: 100vw;
-  height:  100vh;
+  height:  800px;
   background-repeat: no-repeat;
   display: flex;
   z-index: 1;
   /* background-attachment: fixed; */
 }
 
+
+/* mainText.tsx */
+.main-wrapper{
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  z-index: 3;
+  gap: 70vw;
+}
+
 .main-text{
-  width: 50vw;
-  height: calc(100vh - 90px);
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 0 100px 100px;
-  position: relative;
-  bottom: 20px;
-  z-index: 3;
-  color: rgb(0, 0, 0);
+}
+
+.main-text-title{
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: 250;
+}
+
+.main-text-content{
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 200;
 }
 
 .main-btn{
-  width: 50vw;
-  height: calc(100vh - 90px);
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0 0 100px 100px;
-  position: relative;
-  bottom: 20px;
-  right: 100px;
-  z-index: 3;
+  justify-content: center;
+  align-items: center;
   color: rgb(224, 224, 224);
   font-size: 1.4rem;
   gap: 15px;
@@ -202,3 +211,15 @@
   position: fixed;
   opacity: 0.5;
 }
+
+
+/* artistsContent.tsx */
+.artistsContent-wrapper{
+  width: 100vw;
+  height: 1800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+

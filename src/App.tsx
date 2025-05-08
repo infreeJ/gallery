@@ -9,9 +9,13 @@ import NewsPage from './pages/news';
 
 import Header from './components/header';
 import MainImg from './components/mainImg';
+import MainText from './components/mainText';
 import Cookie from './components/cookie';
-import CookieCheck from './components/cookieCheck' ;
-import Overlay from './components/overlay'
+import CookieCheck from './components/cookieCheck';
+import Overlay from './components/overlay';
+
+import ArtistsContent from './components/artistsContent';
+
 
 
 function App() {
@@ -36,6 +40,30 @@ function App() {
   }, [scrollY])
 
 
+  // img Change
+  const [imgNum, setImgNum] = useState(1);
+
+  function imgBtn(i:string) {
+    switch(i){
+        case 'left' :
+            if(imgNum > 1) {
+                setImgNum(imgNum-1);
+            } else if(imgNum == 1) {
+                setImgNum(3)
+            }
+            break
+            
+        case 'right' :
+            if(imgNum < 3) {
+                setImgNum(imgNum+1);
+            } else if(imgNum == 3) {
+                setImgNum(1)
+            }
+            break
+    }
+}
+
+
 
 
 
@@ -54,22 +82,23 @@ function App() {
     document.body.style.overflow = 'unset';
   }
 
+  
 
+  
   return (
   <>
   {manageCookies && <Overlay cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
 
   <Header scrollNum={scrollNum}/>
-  <MainImg/>
+  <MainImg imgNum = {imgNum} setImgNum = {setImgNum}/>
 
   <Cookie cookietap={cookietap} setCookietap={setCookietap} manageCookies={manageCookies} setManageCookies={setManageCookies}/>
 
   {manageCookies && <CookieCheck cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
   
-    <div className='a'>
+  <MainText imgBtn={imgBtn}/>
 
-
-    </div>
+  <ArtistsContent/>
   </>
   )
 }
