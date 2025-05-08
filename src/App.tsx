@@ -66,7 +66,10 @@ function App() {
 
   {manageCookies && <CookieCheck cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
   
-    <div className='a'/>
+    <div className='a'>
+
+
+    </div>
   </>
   )
 }
