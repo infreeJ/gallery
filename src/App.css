@@ -35,9 +35,10 @@
 /* mainImg */
 .main{
   width: 100vw;
-  height:  800px;
+  height:  100vh;
   background-repeat: no-repeat;
   display: flex;
+  position: relative;
   z-index: 1;
   /* background-attachment: fixed; */
 }
@@ -216,10 +217,43 @@
 /* artistsContent.tsx */
 .artistsContent-wrapper{
   width: 100vw;
-  height: 1800px;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
+  position: relative;
+  z-index: 6;
 }
 
+.artistsContent{
+  width: 80%;
+  height: 90%;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.artistsContent-img{
+  /* background-image: url(../public/content2.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
+}
+
+.artistsContent-text{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  gap: 20px;
+}
+
+.artistsContent-hr{
+  border: 1px solid black;
+  width: 100%;
+}

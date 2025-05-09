@@ -14,7 +14,9 @@ import Cookie from './components/cookie';
 import CookieCheck from './components/cookieCheck';
 import Overlay from './components/overlay';
 
-import ArtistsContent from './components/artistsContent';
+import ArtistsContent1 from './components/artistsContent1';
+import ArtistsContent2 from './components/artistsContent2';
+import ArtistsContent3 from './components/artistsContent3';
 
 
 
@@ -29,6 +31,8 @@ function App() {
     // const y = window.scrollY;
     setScrollY(window.scrollY);
   })
+
+  
 
 
   useEffect( () => {
@@ -82,15 +86,21 @@ function App() {
     document.body.style.overflow = 'unset';
   }
 
-  
+
 
   
   return (
   <>
+  
   {manageCookies && <Overlay cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
-
+  
   <Header scrollNum={scrollNum}/>
   <MainImg imgNum = {imgNum} setImgNum = {setImgNum}/>
+
+  <ArtistsContent1/>
+  <ArtistsContent2/>
+  <ArtistsContent3/>
+
 
   <Cookie cookietap={cookietap} setCookietap={setCookietap} manageCookies={manageCookies} setManageCookies={setManageCookies}/>
 
@@ -98,7 +108,7 @@ function App() {
   
   <MainText imgBtn={imgBtn}/>
 
-  <ArtistsContent/>
+  
   </>
   )
 }

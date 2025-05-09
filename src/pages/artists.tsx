@@ -2,7 +2,9 @@ export default function ArtistsPage() {
 
     return(
         <>
-        <div></div>
+        <div>
+            <span></span>
+        </div>
         </>
 
 

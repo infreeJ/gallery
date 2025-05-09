@@ -12,8 +12,8 @@ export default function MainText ({imgBtn} : i) {
                 <span className="main-text-content">2025.5.5 - 2025.7.24 GALLERY_SEOUL</span>
             </div>
             <div className="main-btn">
-                <span onClick={() => {imgBtn('left')}}>⇦</span>
-                <span onClick={() => {imgBtn('right')}}>⇨</span>
+                <span onClick={() => {imgBtn('left')}} style={{cursor:'pointer'}}>⇦</span>
+                <span onClick={() => {imgBtn('right')}} style={{cursor:'pointer'}}>⇨</span>
             </div>
         </div>
         </>
