@@ -15,11 +15,11 @@ export default function Header ({scrollNum}: i) {
     <>
     <nav>
         <div className='nav' style={{maxHeight: scrollNum ? '90px' : '0px'}}>
-        <span className='logo' onClick={ () => {navigate("/")}}>Gallery</span>
+        <span className='logo' onClick={ () => {navigate("/")}}>Johyun Gallery</span>
         <div className='category'>
-            <span className='category-artists' onClick={ () => {navigate("/artists")}}>artists</span>
-            <span className='category-exhibitions' onClick={ () => {navigate("/exhibitions")}}>exhibitions</span>
-            <span className='category-news' onClick={ () => {navigate("/news")}}>news</span>
+            <span className='category-artists' onClick={ () => {navigate("/artists")}}>ARTISTS</span>
+            <span className='category-exhibitions' onClick={ () => {navigate("/exhibitions")}}>EXHIBITIONS</span>
+            <span className='category-news' onClick={ () => {navigate("/news")}}>NEWS</span>
         </div>
         </div>
     </nav>

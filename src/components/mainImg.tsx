@@ -33,7 +33,7 @@ export default function MainImg({imgNum, setImgNum} : i) {
 
     function handleParallax() {
         return {
-            transform : `translateY(${scrollY * 0.5}px)`
+            transform : `translateY(${scrollY * 0.6}px)`
     }}
 
     // window.addEventListener('scroll', () => {

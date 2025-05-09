@@ -17,6 +17,9 @@ import Overlay from './components/overlay';
 import ArtistsContent1 from './components/artistsContent1';
 import ArtistsContent2 from './components/artistsContent2';
 import ArtistsContent3 from './components/artistsContent3';
+import YoutubeVideo from './components/youtubeVideo';
+import YoutubeVideoLink from './components/youtubeVideo-link';
+
 
 
 
@@ -25,22 +28,19 @@ function App() {
 // header disable
   const [scrollNum, setScrollNum] = useState(true)
   const [scrollY, setScrollY] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(600)
 
-  
   window.addEventListener("scroll", () => {
-    // const y = window.scrollY;
     setScrollY(window.scrollY);
   })
-
   
-
-
   useEffect( () => {
-    if(scrollY == 0){
+    if(scrollY <= lastScrollY){
       setScrollNum(true)
-    } else {
+    } else if (scrollY > lastScrollY){
       setScrollNum(false)
     }
+    setLastScrollY(window.scrollY)
   }, [scrollY])
 
 
@@ -106,9 +106,10 @@ function App() {
 
   {manageCookies && <CookieCheck cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
   
-  <MainText imgBtn={imgBtn}/>
+  <MainText imgBtn={imgBtn} imgNum = {imgNum}/>
 
-  
+  <YoutubeVideo/>
+  <YoutubeVideoLink/>
   </>
   )
 }
