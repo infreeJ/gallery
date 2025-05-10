@@ -302,3 +302,12 @@
   line-height: 40px;
   cursor: pointer;
 }
+
+/* titleBox */
+
+.titleBox{
+  width: 100vw;
+  height: 2000px;
+  background-color: brown;
+}
+

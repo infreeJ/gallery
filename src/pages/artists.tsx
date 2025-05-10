@@ -1,13 +1,13 @@
+
+
+
 export default function ArtistsPage() {
 
     return(
         <>
-        <div>
-            <span></span>
-        </div>
+            <div>
+                <span>asdasdas</span>
+            </div>
         </>
-
-
     )
-
 }

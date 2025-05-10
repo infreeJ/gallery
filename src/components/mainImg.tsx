@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react"
+import { useState } from "react"
 
 
 
@@ -8,7 +8,7 @@ interface i {
 }
 
 
-export default function MainImg({imgNum, setImgNum} : i) {
+export default function MainImg({imgNum} : i) {
 
     // img change
     

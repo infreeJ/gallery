@@ -20,6 +20,8 @@ import ArtistsContent3 from './components/artistsContent3';
 import YoutubeVideo from './components/youtubeVideo';
 import YoutubeVideoLink from './components/youtubeVideo-link';
 
+import TitleBox from './components/titleBox'
+
 
 
 
@@ -110,6 +112,7 @@ function App() {
 
   <YoutubeVideo/>
   <YoutubeVideoLink/>
+  <TitleBox/>
   </>
   )
 }
