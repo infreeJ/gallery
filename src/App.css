@@ -307,7 +307,16 @@
 
 .titleBox{
   width: 100vw;
-  height: 2000px;
-  background-color: brown;
+  height: 63vh;
+  background-color: rgb(34, 34, 34);
 }
 
+.titleName{
+  font-size: 3rem;
+  font-weight: 200;
+  position: absolute;
+  top: 50vh;
+  left: 100px;
+  color: white;
+  letter-spacing: 7px;
+}

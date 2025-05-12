@@ -1,7 +1,16 @@
-export default function NewsPage () {
+
+interface Props {
+    titleName : string;
+}
+
+export default function NewsPage({titleName} : Props) {
+
 
     return(
-        <div></div>
+        <>
+        <div className="titleBox">
+            <span className='titleName'>{titleName}</span>
+        </div>
+        </>
     )
-
 }

@@ -1,13 +1,15 @@
+interface Props {
+    titleName : string;
+}
 
 
-
-export default function ArtistsPage() {
+export default function ArtistsPage({titleName} : Props) {
 
     return(
         <>
-            <div>
-                <span>asdasdas</span>
-            </div>
+        <div className="titleBox">
+            <span className='titleName'>{titleName}</span>
+        </div>
         </>
     )
 }

@@ -1,11 +1,16 @@
-export default function ExhibitionsPage() {
+
+interface Props {
+    titleName : string;
+}
+
+export default function ExhibitionsPage({titleName} : Props) {
+
 
     return(
         <>
-        <div></div>
+        <div className="titleBox">
+            <span className='titleName'>{titleName}</span>
+        </div>
         </>
-
-
     )
-
 }

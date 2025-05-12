@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 
 interface i {
     imgBtn : (i : 'left' | 'right') => void
@@ -6,6 +5,8 @@ interface i {
 }
 
 export default function MainText ({imgBtn, imgNum} : i) {
+
+
 
     // text change
     function title() {
@@ -53,4 +54,5 @@ export default function MainText ({imgBtn, imgNum} : i) {
         </div>
         </>
     )
+    
 }
