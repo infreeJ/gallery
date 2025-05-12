@@ -3,7 +3,7 @@ export default function ArtistsContent3 () {
         <>
         <div className="artistsContent-wrapper">
             <div className="artistsContent">
-                <div className="artistsContent-img" style={{backgroundImage: 'url(../public/content3.jpg)'}}/>
+                <div className="artistsContent-img" style={{backgroundImage: 'url(/content3.jpg)', backgroundPosition: 'center center'}}/>
                 <div className="artistsContent-text">
                     <span style={{fontSize: '2rem', fontWeight: '250', letterSpacing: '5px'}}>Chung Chang-Sup I Kwon Dae Sup</span>
                     <span style={{fontSize: '0.9rem', fontWeight: '300', letterSpacing: '2px'}}>Johyun Gallery_Seoul</span>

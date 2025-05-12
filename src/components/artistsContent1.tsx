@@ -3,7 +3,7 @@ export default function ArtistsContent1 () {
         <>
         <div className="artistsContent-wrapper">
             <div className="artistsContent">
-            <img className="artistsContent-img" style={{backgroundImage: 'url(../public/content1.jpg)'}}/>
+            <img className="artistsContent-img" style={{backgroundImage: 'url(/content1.jpg)', backgroundPosition: 'center center'}}/>
                 <div className="artistsContent-text">
                     <span style={{fontSize: '2rem', fontWeight: '250', letterSpacing: '5px'}}>Philippe Parreno</span>
                     <span style={{fontSize: '0.9rem', fontWeight: '300', letterSpacing: '2px'}}>Johyun Gallery_Dalmaji</span>
