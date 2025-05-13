@@ -1,11 +1,8 @@
 import { useState } from "react"
 
-
-
 interface i {
     imgNum : number
 }
-
 
 export default function MainImg({imgNum} : i) {
 
@@ -13,10 +10,9 @@ export default function MainImg({imgNum} : i) {
     function imgChange() {
         return {
             backgroundImage: `url(/mainImg${imgNum}.jpg)`,
+            
     }
 }
-
-
 
     // parallax
     const [scrollY, setScrollY] = useState(0)
@@ -25,7 +21,6 @@ export default function MainImg({imgNum} : i) {
         return {
             transform : `translateY(${scrollY * 0.6}px)`
     }}
-
         window.requestAnimationFrame(() => {
             setScrollY(window.scrollY)
         })
@@ -36,6 +31,7 @@ export default function MainImg({imgNum} : i) {
         <>
         <div className="main" style={{ ...imgChange(), ...handleParallax() }}>
         </div>
+        
         </>
     )
 }

@@ -17,8 +17,9 @@ interface Props {
 
 export default function ExhibitionsPage({titleName} : Props) {
 
-    const [place, setPlace] = useState(0);
 
+    // 위치 버튼 클릭 시 다르게 출력되는 컨텐츠
+    const [place, setPlace] = useState(0);
 
     function handlePlace() : React.ReactNode {
         if(place == 0) {
@@ -44,7 +45,7 @@ export default function ExhibitionsPage({titleName} : Props) {
         }
     }
 
-
+        
         function handlePlaceMini() : React.ReactNode {
         if(place == 0) {
             return (

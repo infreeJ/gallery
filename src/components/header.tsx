@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom"
 
-
-
 interface i {
     scrollNum : boolean
     takeName : (n : string ) => void
@@ -10,9 +8,6 @@ interface i {
 export default function Header ({scrollNum, takeName}: i) {
 
     const navigate = useNavigate();
-
-
-
 
     return(
     <>

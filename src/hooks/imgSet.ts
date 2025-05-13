@@ -1,11 +1,14 @@
 import { useState } from "react";
 
 
-export default function ImgSet () : {imgNum : number; imgBtn : (i : 'left' | 'right') => void} {
+export default function ImgSet () : {imgNum : number; imgBtn : (i : 'left' | 'right') => void; overlayState : boolean} {
         const [imgNum, setImgNum] = useState(1);
+        const [overlayState, SetOverlayState] = useState(true)
     
         function imgBtn(i:string) {
-        switch(i){
+            SetOverlayState((bool => !bool))
+            setTimeout(() => {
+                switch(i){
             case 'left' :
                 if(imgNum > 1) {
                     setImgNum(imgNum-1);
@@ -22,6 +25,8 @@ export default function ImgSet () : {imgNum : number; imgBtn : (i : 'left' | 'ri
                 }
                 break
         }
+            }, 100);
+        
     }
-    return {imgNum, imgBtn}
+    return {imgNum, imgBtn, overlayState}
 }

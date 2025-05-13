@@ -5,8 +5,6 @@ interface i {
     setManageCookies : React.Dispatch<React.SetStateAction<boolean>>
 }
 
-
-
 export default function Overlay ({setCookietap, setManageCookies} : i) {
     return (
         <>

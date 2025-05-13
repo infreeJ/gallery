@@ -45,7 +45,17 @@
   position: relative;
   z-index: 1;
   background-size: cover;
-  background-position: 60%;
+  background-position: center;
+}
+
+.black-overlay{
+  width: 100vw;
+  height:  100vh;
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
 }
 
 
@@ -380,6 +390,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 55px;
+  cursor: pointer;
 }
 
 .MiniContent-img{

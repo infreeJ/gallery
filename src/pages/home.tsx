@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-
+// 컴포넌트
 import MainImg from '../components/mainImg';
 import MainText from '../components/mainText';
 import Cookie from '../components/cookie';
 import CookieCheck from '../components/cookieCheck';
 import Overlay from '../components/overlay';
+import BlackOverlay from '../components/blackOverlay'
 
 import ArtistsContent1 from '../components/artistsContent1';
 import ArtistsContent2 from '../components/artistsContent2';
@@ -14,8 +15,7 @@ import YoutubeVideo from '../components/youtubeVideo';
 import YoutubeVideoLink from '../components/youtubeVideo-link';
 
 
-//Hooks
-
+// 훅
 import ImgSet from '../hooks/imgSet'
 
 
@@ -25,8 +25,18 @@ export default function HomePage () {
 
 
     
+    // 버튼 클릭으로 메인 이미지 변경 및 페이드 인-아웃
+    const {imgNum, imgBtn, overlayState} = ImgSet()
 
-    const {imgNum, imgBtn} = ImgSet()
+    const [blackBool, setBlackBool] = useState(false)
+
+    useEffect(() => {
+        setBlackBool(true)
+        setTimeout(() => {
+            setBlackBool(false)
+        }, 300);
+    }, [overlayState])
+
 
 
 
@@ -53,8 +63,9 @@ export default function HomePage () {
         
     {manageCookies && <Overlay cookietap={cookietap} setCookietap={setCookietap} manageCookies = {manageCookies} setManageCookies = {setManageCookies}/>}
         
-    
+    <BlackOverlay blackBool= {blackBool}/>
     <MainImg imgNum = {imgNum}/>
+    
 
     <ArtistsContent1/>
     <ArtistsContent2/>
